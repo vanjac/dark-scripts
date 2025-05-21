@@ -1,0 +1,13 @@
+# Built-in scripts
+/ase_export_blend.py
+/ase_export.py
+/check_for_invalid_visportals.py
+/count_loot.py
+/example.py
+/export_obj.py
+/find_duplicate_entities.py
+/patchsplitter.py
+/select_all_models_of_type.py
+/shift_textures_randomly.py
+/shift_textures_upwards_randomly.py
+/test_targets.py
