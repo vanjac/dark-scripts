@@ -6,7 +6,7 @@ def execute():
 
     caulk = 'textures/common/caulk'
 
-    class SelectionVisitorTest(dr.SelectionVisitor):
+    class RoomSelectionVisitor(dr.SelectionVisitor):
         def visit(self, s):
             brush = s.getBrush()
             if not brush.isNull():
@@ -14,7 +14,7 @@ def execute():
                     brush.getFace(f).setShader(caulk)
 
     GlobalCommandSystem.execute('CSGRoom')
-    GlobalSelectionSystem.foreachSelected(SelectionVisitorTest())
+    GlobalSelectionSystem.foreachSelected(RoomSelectionVisitor())
 
 if __executeCommand__:
     execute()
