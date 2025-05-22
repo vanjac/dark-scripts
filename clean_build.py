@@ -1,5 +1,5 @@
 __commandName__ = 'CleanBuildFiles'
-__commandDisplayName__ = '(File) Clean Build Files'
+__commandDisplayName__ = '(Map) Clean Build Files'
 
 def execute():
     import os
