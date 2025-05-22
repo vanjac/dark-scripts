@@ -1,5 +1,5 @@
 __commandName__ = 'OpenContainingFolder'
-__commandDisplayName__ = 'Open Containing Folder'
+__commandDisplayName__ = '(File) Open Containing Folder'
 
 def execute():
     import os, subprocess, platform

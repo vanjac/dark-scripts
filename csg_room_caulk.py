@@ -1,5 +1,5 @@
 __commandName__ = 'CSGRoomCaulk'
-__commandDisplayName__ = 'Make Room With Caulk'
+__commandDisplayName__ = '(Brush) Make Room With Caulk'
 
 def execute():
     import darkradiant as dr
