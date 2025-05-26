@@ -1,3 +1,7 @@
+"""
+Make a CSG room where all but the interior faces are textured with Caulk.
+"""
+
 __commandName__ = 'CSGRoomCaulk'
 __commandDisplayName__ = '(Brush) Make Room With Caulk'
 
@@ -10,6 +14,9 @@ def execute():
         def visit(self, s):
             brush = s.getBrush()
             if not brush.isNull():
+                # Set all but the last face to Caulk shader.
+                # This relies on the last face always being the one facing the interior, which is
+                # not documented behavior of CSGRoom and could easily break in the future!
                 for f in range(brush.getNumFaces() - 1):
                     brush.getFace(f).setShader(caulk)
 
