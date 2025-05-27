@@ -15,8 +15,9 @@ def execute():
             brush = s.getBrush()
             if not brush.isNull():
                 # Set all but the last face to Caulk shader.
-                # This relies on the last face always being the one facing the interior, which is
-                # not documented behavior of CSGRoom and could easily break in the future!
+                # This relies on the last face always being the one facing the interior,
+                # which is not documented behavior of CSGRoom and could easily break in the future!
+                # See brush::algorithm::hollowBrush in radiantcore/brush/csg/CSG.cpp
                 for f in range(brush.getNumFaces() - 1):
                     brush.getFace(f).setShader(caulk)
 
